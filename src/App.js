@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React from 'react'
 // import logo from './logo.svg';
-import {CardList} from './components/card-list/card-list.component';
-import {SearchBox} from './components/search-box/search-box.component'
+import CardList from './components/card-list/card-list.component';
+import SearchBox from './components/search-box/search-box.component'
 import './App.css';
 
 class App extends React.Component{
