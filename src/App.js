@@ -10,7 +10,8 @@ class App extends React.Component{
     super();
     this.state = {
       monsters : [],
-      searchField: ''
+      searchField: '',
+      fonthange: ''
     };
 
   }
@@ -19,10 +20,16 @@ class App extends React.Component{
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response=> response.json())
     .then(users=>this.setState({monsters:users}));
+
+    
   }
 
   handleChange = e =>{
-    this.setState({searchField: e.target.value})
+    this.setState({searchField: e.target.value});
+  }
+
+  handleClick = () => {
+
   }
 
   render(){
@@ -39,7 +46,9 @@ class App extends React.Component{
         />
         <CardList monsters={filteredMonsters}>
         </CardList>
-      
+      <button onClick={this.handleClick}>
+        Change font
+      </button>
     </div>
     )
   }
